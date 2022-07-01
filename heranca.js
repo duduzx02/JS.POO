@@ -14,17 +14,23 @@ class Produto{
 class Livro extends Produto{
     titulo;
     numPag;
-    constructor(titulo, numPag){
-        super('Livro');
+    constructor(tipo, titulo, numPag){
+        super(tipo);
         this.titulo = titulo;
         this.numPag = numPag;
+        console.log(super.getDados())
+    }
+    exibeDadosLivros(){
+        console.log(`${this.getDados()}. ${this.titulo} - ${this.numPag} Páginas.`)
     }
 }
 
-const prod = new Produto('Produto Genérico');
+/*const prod = new Produto('Produto Genérico');
 console.log(prod.tipo);
-console.log(prod.getDados())
+console.log(prod.getDados())*/
 
-const liv = new Livro('Meu livro', 125);
-console.log(liv);
-console.log(liv.getDados());
+const liv = new Livro('protudo', 'Meu livro', 125);
+//console.log(liv);
+//console.log(liv.getDados());
+
+liv.exibeDadosLivros();
