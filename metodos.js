@@ -26,7 +26,22 @@ class Produto {
 
 const prod = new Produto('Meu produto', 10, 3, 2, 80);
 console.log(prod.volumeProduto());
+console.log(prod)
+
+
+prod.descrição = 'Novo Produto'
+console.log(prod.descrição)
+
+
+
+
+
+
+
+
 
 let parcelas = 2
 
 console.log(prod.parcelaValor(parcelas))
+
+
